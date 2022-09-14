@@ -8,12 +8,8 @@ name: "Code scanning"
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'web/**'
   pull_request:
     branches: [ main ]
-    paths:
-      - 'web/**'
 
 jobs:
   analyze:
