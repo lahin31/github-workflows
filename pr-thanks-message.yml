@@ -11,6 +11,7 @@ jobs:
   thanks-pr-message:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Thanks PR
         uses: thollander/actions-comment-pull-request@v1
         with:
