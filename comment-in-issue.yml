@@ -1,0 +1,19 @@
+name: 'Welcome PR Message'
+
+on:
+  pull_request_target:
+    types: 
+      - opened
+    branches: 
+      - 'main'
+
+jobs:
+  welcome-pr-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v1
+        with:
+          message: |
+            Hello there, thanks for opening your Pull Request. Someone will review it soon.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
